@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Remove Comments</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title text-center mb-5">Remove Comments from Code</h1>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form class="input-form" method="POST">
+                <div class="form-group">
+                  <label for="input-code"><i class="fas fa-edit"></i> Input Code:</label>
+                  <textarea class="form-control" id="input-code" rows="8" name="code">{{ code }}</textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary mx-auto"><i class="fas fa-cog"></i> Convert</button>
+                </div>
+                <div class="form-group">
+                    <label for="output-code"><i class="fas fa-file-code"></i> Output Code:</label>
+                    {% if output %}
+                    <textarea class="form-control" id="output-code" rows="8" readonly>{{ output }}</textarea>
+                    {% else %}
+                    <textarea class="form-control" id="output-code" rows="8" readonly></textarea>
+                    {% endif %}
+                </div>
+            </form>
+            </div>
+        </div>
+      </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core@3.6.0/dist/tf-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@3.6.0/dist/tf-converter.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/03f552d912.js" crossorigin="anonymous"></script>
+</body>
+</html>
